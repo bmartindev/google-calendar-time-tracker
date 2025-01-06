@@ -29,7 +29,7 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 
 ### Update the IDs
 
-1.  In the pasted code, find and replace YOUR_GMAIL@gmail.com (line 25) with your gmail. Make sure it is the same gmail used with your google calendar
+1.  In the pasted code, find and replace YOUR_GMAIL@gmail.com (line 25) with your Gmail. Make sure it is the same Gmail used with your google calendar
 2.  In the pasted code, find and replace Replace YOUR_SPREADSHEET_ID (line 26) with your Google Sheet ID
   * Get your Google Sheet ID from the URL. Open your spreadsheet in a browser, and copy the string of letters and numbers that come after the "/d/" portion of the URL. Example:
 

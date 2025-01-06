@@ -60,3 +60,12 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 * Categories are recognized by short codes in the event title, e.g. "WP" for “Work Project,” "H" for “Health,” etc.
 * If any row has a formula in Column B (like =SUM(...)), the script replicates it to the new date column, adjusting references from B to the new column’s letter.
 * The script also checks whether the event is already colored correctly. If not, it sets the event color based on the first letter of the event title (W → red, L → blue, H → green, else → purple).
+
+
+
+## Future Plans
+
+* Add an example google sheet for copying format
+* Add a dashboard for viewing data
+* Add survey question support foe tracking goals (sleep scores, weekly goals, etc)
+* Create a single app that handles everything

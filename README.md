@@ -11,10 +11,10 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 1. Create or Open a Google Sheet
 2. Create one sheet (click the + icon on the bottom left) per year: For example, name a sheet exactly "2025". (If the script references a year that doesn’t exist, it will create a new sheet automatically)
 3. Format your sheets:
-  * Row 1 contains dates using format mm/dd/yyy
-  * Column 1 contains category names
-  * Column 2 contains category abbreviations (your google calendar event titles)
-  * Column 2 can also contain formulas, which will be automatically copied to new columns created by the script. See example:
+   * Row 1 contains dates using format mm/dd/yyy
+   * Column 1 contains category names
+   * Column 2 contains category abbreviations (your google calendar event titles)
+   * Column 2 can also contain formulas, which will be automatically copied to new columns created by the script. See example:
 
 
     ![TimeTrackerExample](https://github.com/user-attachments/assets/4310b892-7276-49da-9b68-f5880c894150)
@@ -31,10 +31,10 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 
 1.  In the pasted code, find and replace YOUR_GMAIL@gmail.com (line 25) with your Gmail. Make sure it is the same Gmail used with your google calendar
 2.  In the pasted code, find and replace Replace YOUR_SPREADSHEET_ID (line 26) with your Google Sheet ID
-  * Get your Google Sheet ID from the URL. Open your spreadsheet in a browser, and copy the string of letters and numbers that come after the "/d/" portion of the URL. Example:
+   * Get your Google Sheet ID from the URL. Open your spreadsheet in a browser, and copy the string of letters and numbers that come after the "/d/" portion of the URL. Example:
 
 
-    ![image](https://github.com/user-attachments/assets/def719d9-3dba-4cdb-bda4-f4de3a67af55)
+     ![image](https://github.com/user-attachments/assets/def719d9-3dba-4cdb-bda4-f4de3a67af55)
 
 
 ### Add a Trigger

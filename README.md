@@ -1,8 +1,3 @@
-# google-calendar-time-tracker
-Sync google calendar events to a google sheet
-
-
-
 ## About The Project
 
 I wanted a simple, automated way to track how my time is spent, so I made this. This script automatically logs your Google Calendar events into a Google Sheet. It adds columns for each day, sums up event durations by user-defined categories, preserves any existing spreadsheet formulas, and color-codes events on the calendar. Essentially, it turns Google Calendar into a powerful time-tracking system with minimal effort.

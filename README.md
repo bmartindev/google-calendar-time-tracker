@@ -20,25 +20,25 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
     ![TimeTrackerExample](https://github.com/user-attachments/assets/4310b892-7276-49da-9b68-f5880c894150)
 
 
-### Copy the Script
+### Copy the code from GitHub into AppsScript
 
-1. In your Google Sheet, go to Extensions → Apps Script
-2. Name your project
-3. Create a new project or paste the script code into the editor. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA COPY PASTE
+1. From this GitHub page, Open the "SyncCalendarToSheet.gs" file in a new tab, and copy all the code
+3. In your Google Sheet, go to Extensions → Apps Script
+4. Paste into the AppsScript editor
+5. Name your AppsScript project anything you like
 
 ### Update the IDs
 
-1.  In the code, find and replace YOUR_GMAIL@gmail.com (line 25) with your gmail. Make sure it is the same gmail used with your google calendar
-2.  In the code, find and replace Replace YOUR_SPREADSHEET_ID (line 26) with your Google Sheet ID
+1.  In the pasted code, find and replace YOUR_GMAIL@gmail.com (line 25) with your gmail. Make sure it is the same gmail used with your google calendar
+2.  In the pasted code, find and replace Replace YOUR_SPREADSHEET_ID (line 26) with your Google Sheet ID
   * Get your Google Sheet ID from the URL. Open your spreadsheet in a browser, and copy the string of letters and numbers that come after the "/d/" portion of the URL. Example:
 
 
     ![image](https://github.com/user-attachments/assets/def719d9-3dba-4cdb-bda4-f4de3a67af55)
 
 
-### Set a Trigger
+### Add a Trigger
 
 1. In the Apps Script Editor, click Triggers (alarm clock icon) or go to Project Settings → Triggers
 2. Add Trigger for the function runScriptSafely(), choose Time-driven, and pick an interval (e.g., once per hour)
 3. Authorize the script when prompted, so it can access your Calendar and Spreadsheet
-

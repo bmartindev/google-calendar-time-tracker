@@ -42,9 +42,9 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 
 
 ## Usage
-*To log an event, open the google calendar app, create an event with the desired time, and name it with one of your abbreviations. For example, after a 30 minute breakfast, I would open the app and create a 30 minute event with the title HD (HD for Health: Diet). 
-*To add/remove categories, open the google sheet and create a new row with the abbreviation in column 2 (same format as shown in the example image above). The script will automatically sort calendar events and their times according to the matching abbreviations in column 2. Add as many categories as you want, at any time.
-*Adding multiple abbreviations to the same event will distribute the time to all of the events. For example, if you have a category Vacation (v), and you eat a 30 minute breakfast on vacation, you could create a 30 minute event titled "HD v" and both rows will receive 30 minutes. This allows you to track total vacation time, travel time, or other states, while still logging everything else. Make sure to separate abbreviations with a space when adding them to the calendar (HDv will not work, HD v will work).
+   *To log an event, open the google calendar app, create an event with the desired time, and name it with one of your abbreviations. For example, after a 30 minute breakfast, I would open the app and create a 30 minute event with the title HD (HD for Health: Diet). 
+   *To add/remove categories, open the google sheet and create a new row with the abbreviation in column 2 (same format as shown in the example image above). The script will automatically sort calendar events and their times according to the matching abbreviations in column 2. Add as many categories as you want, at any time.
+   *Adding multiple abbreviations to the same event will distribute the time to all of the events. For example, if you have a category Vacation (v), and you eat a 30 minute breakfast on vacation, you could create a 30 minute event titled "HD v" and both rows will receive 30 minutes. This allows you to track total vacation time, travel time, or other states, while still logging everything else. Make sure to separate abbreviations with a space when adding them to the calendar (HDv will not work, HD v will work).
 
 
 

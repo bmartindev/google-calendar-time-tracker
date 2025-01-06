@@ -17,7 +17,8 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 * Column 2 can also contain formulas, which will be automatically copied to new columns created by the script. See example:
 
 <p align="center">
-![TimeTrackerExample](https://github.com/user-attachments/assets/a09af55b-fe44-4f56-bdef-8370f8b7d6ef)
+![TimeTrackerExample](https://github.com/user-attachments/assets/4310b892-7276-49da-9b68-f5880c894150)
+
 </p>
 
 ### Copy the Script

@@ -16,6 +16,7 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 1. Create or Open a Google Sheet
 2. Create one sheet (click the + icon on the bottom left) per year: For example, name a sheet exactly "2025". (If the script references a year that doesn’t exist, it will create a new sheet automatically)
 3. Format your sheets:
+* Row 1 contains dates using format mm/dd/yyy
 * Column 1 contains category names
 * Column 2 contains category abbreviations (your google calendar event titles)
 * Column 2 can also contain formulas, which will be automatically copied to new columns created by the script. See example:

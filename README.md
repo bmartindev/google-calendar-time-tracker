@@ -18,9 +18,8 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 3. Format your sheets:
 * Column 1 contains category names
 * Column 2 contains category abbreviations (your google calendar event titles)
-* Column 2 can also contain formulas, which will be automatically copied to new columns created by the script
+* Column 2 can also contain formulas, which will be automatically copied to new columns created by the script. See example:
 
-Example:
 ![TimeTrackerExample](https://github.com/user-attachments/assets/a09af55b-fe44-4f56-bdef-8370f8b7d6ef)
 
 ### Copy the Script

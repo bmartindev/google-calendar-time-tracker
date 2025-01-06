@@ -66,6 +66,6 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 ## Future Plans
 
 * Add an example google sheet for copying format
-* Add a dashboard for viewing data
-* Add survey question support foe tracking goals (sleep scores, weekly goals, etc)
+* Add support for a dashboard
+* Add support for survey questions (sleep scores, weekly goals, etc)
 * Create a single app that handles everything

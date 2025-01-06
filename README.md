@@ -29,7 +29,9 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 1.  In the code, find and replace "johndoe@gmail.com" (line 26) with the Gmail used by your Google Calendar. Keep the apostrophees.
 2.  In the code, find and replace Replace YOUR_SPREADSHEET_ID with your Google Sheet ID (from the sheet’s URL)
 * Get your spreadsheet ID by looking at the URL. Open your spreadsheet in a browser, and copy the string of letters and numbers that come after the "/d/" portion of the URL. Example:
-![image](https://github.com/user-attachments/assets/d233d2c7-5213-40a5-a5cf-4ac621b5627f)
+
+![image](https://github.com/user-attachments/assets/def719d9-3dba-4cdb-bda4-f4de3a67af55)
+
 
 ### Set a Trigger
 

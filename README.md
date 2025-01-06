@@ -1,11 +1,10 @@
-## About The Project
+## About
 
 I wanted a simple, automated way to track how my time is spent, so I made this. This script automatically logs your Google Calendar events into a Google Sheet. It adds columns for each day, sums up event durations by user-defined categories, preserves any existing spreadsheet formulas, and color-codes events on the calendar. Essentially, it turns Google Calendar into a powerful time-tracking system with minimal effort.
 
 
 
-## Setup Instructions
-
+## Setup
 ### Create a Google Sheet
 
 1. Create or Open a Google Sheet

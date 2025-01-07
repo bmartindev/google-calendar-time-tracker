@@ -69,3 +69,4 @@ I wanted a simple, automated way to track how my time is spent, so I made this. 
 * Add support for a dashboard
 * Add support for survey questions (sleep scores, weekly goals, etc)
 * Create a single app that handles everything
+* Research lossless methods for logging events, in order to track average event durations, etc. Look into tools like Zapier and Integromat for pulling event data directly into google sheets

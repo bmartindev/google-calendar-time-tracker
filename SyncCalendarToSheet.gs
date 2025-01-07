@@ -22,7 +22,7 @@ function runScriptSafely() {
  * 2) MAIN LOGIC: Sync Calendar Events
  *******************************************************/
 function syncCalendarEvents() {
-  const calendarId = "YOUR_GMAIL@gmail.com";  //REPLACE WITH YOUR GOOGLE CALENDAR GMAIL
+  const calendarId = "YOUR_GMAIL@gmail.com";  // REPLACE WITH YOUR GOOGLE CALENDAR GMAIL
   const spreadsheetId = "YOUR_SPREADSHEET_ID";  // REPLACE WITH YOUR SPREADSHEET ID
 
   // How many days back to include (plus today)
@@ -48,10 +48,10 @@ function syncCalendarEvents() {
  *  3) Gather & write event durations (excluding future events)
  *  4) AFTER writing data, replicate any formula from Column B 
  *     to the same row in this date column
- *  5) Only color events if:
- *        a) the event has started, AND
- *        b) the event title is listed in Column B, AND
- *        c) the current color differs from desired color
+ *  5) Color events only if:
+ *        a) the event has started,
+ *        b) the first category is listed in Column B,
+ *        c) the current color differs from the desired color.
  *******************************************************/
 function syncOneDay(spreadsheet, calendar, dayDate) {
   const year = dayDate.getFullYear();
@@ -75,7 +75,7 @@ function syncOneDay(spreadsheet, calendar, dayDate) {
     const duration = getDurationOfEventOnDate(event, dayDate);
     if (duration <= 0) return;
 
-    // Parse categories from event title (if you like multiple categories)
+    // Parse categories from event title (handles multiple, e.g. "WP t")
     const categories = getCategoriesFromTitle(event.getTitle());
     categories.forEach(cat => {
       categoryHours[cat] = (categoryHours[cat] || 0) + duration;
@@ -90,14 +90,19 @@ function syncOneDay(spreadsheet, calendar, dayDate) {
   // 4) Copy any formula from Column B to the same row in this column
   replicateFormulasFromColB(sheet, dateCol);
 
-  // 5) Color events only if they're listed in Column B and have started
+  // 5) Color events only if first category is recognized in Column B
   const validTitles = getTitlesInColumnB(sheet); // read all titles in col B
   events.forEach(event => {
     if (event.getStartTime() > now) return; 
-    // Only color if the event title is in col B
-    const title = event.getTitle().trim();
-    if (validTitles.includes(title)) {
-      setEventColorIfNeeded(event);
+    // parse categories from event again
+    const categories = getCategoriesFromTitle(event.getTitle());
+    if (!categories.length) return;
+
+    // pick the first category
+    const firstCat = categories[0].trim();
+    // only color if firstCat is in col B
+    if (validTitles.includes(firstCat)) {
+      setEventColorIfNeeded(event, firstCat);
     }
   });
 }
@@ -234,10 +239,10 @@ function writeCategoryHours(sheet, dateCol, categoryHours) {
 }
 
 /*******************************************************
- * ONLY COLOR IF EVENT TITLE APPEARS IN COLUMN B
+ * ONLY COLOR IF FIRST CATEGORY APPEARS IN COLUMN B
  *******************************************************/
-function setEventColorIfNeeded(event) {
-  const desiredColor = determineColorByTitle(event.getTitle());
+function setEventColorIfNeeded(event, cat) {
+  const desiredColor = determineColorByTitle(cat);
   if (event.getColor() !== desiredColor) {
     event.setColor(desiredColor);
   }
@@ -266,11 +271,11 @@ function determineColorByTitle(title) {
   if (!title) return CalendarApp.EventColor.GRAY;
   const c = title.trim().charAt(0).toUpperCase();
   switch (c) {
-    case "W": return CalendarApp.EventColor.RED; //Events beginning with W will be RED
-    case "L": return CalendarApp.EventColor.CYAN; //Events beginning with L will be BLUE (CYAN)
-    case "H": return CalendarApp.EventColor.PALE_GREEN; //Events beginning with H will be GREEN (PALE_GREEN)
-    case "S": return CalendarApp.EventColor.PALE_BLUE //Events beginning with S will be PURPLE (PALE_BLUE)
-    default:  return CalendarApp.EventColor.GRAY; //Events remaining will be GRAY
+    case "W": return CalendarApp.EventColor.RED;         // W => Red
+    case "L": return CalendarApp.EventColor.CYAN;        // L => Cyan
+    case "H": return CalendarApp.EventColor.PALE_GREEN;  // H => Pale Green
+    case "S": return CalendarApp.EventColor.PALE_BLUE;   // S => Pale Blue (sleep, etc.)
+    default:  return CalendarApp.EventColor.GRAY;        // Otherwise => Gray
   }
 }
 
